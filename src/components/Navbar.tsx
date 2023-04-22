@@ -4,8 +4,9 @@ import { BeakerIcon, Bars4Icon } from "@heroicons/react/24/solid";
 type props = {
   isOpenmenu: boolean;
   setisOpenmenu: (value: boolean) => void;
+  navItems: string[];
 };
-const Navbar = ({ isOpenmenu, setisOpenmenu }: props) => {
+const Navbar = ({ isOpenmenu, setisOpenmenu, navItems }: props) => {
   return (
     <div>
       <div className=" fixed top:0 w-full px-[40px] flex justify-between items-center border">
@@ -17,24 +18,15 @@ const Navbar = ({ isOpenmenu, setisOpenmenu }: props) => {
           {/* nav items */}
           <div className="hidden lg:flex justify-between items-center gap-8 grow">
             <ul className="flex justify-between items-center gap-8 ">
-              <li>
-                <a href="#home">Home</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#classes">Classes</a>
-              </li>
-              <li>
-                <a href="#trainer">Trainers</a>
-              </li>
-              <li>
-                <a href="#contactus">Contact Us</a>
-              </li>
-              <li>
-                <a href="#gallery">gallery</a>
-              </li>
+              {navItems.map((item) => {
+                return (
+                  <li>
+                    <a href={`#${item.toLowerCase().replace(" ", "")}`}>
+                      {item}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           {/* number and sign in */}
@@ -63,39 +55,18 @@ const Navbar = ({ isOpenmenu, setisOpenmenu }: props) => {
       {isOpenmenu && (
         <div className="transition dauration-500 lg:hidden pt-[50px] fixed top-0 bottom-0 right-0 w-[200px] bg-cyan-600">
           <ul className=" w-100 flex flex-col justify-center items-start gap-2 mb-3">
-            <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block text-white w-full" href="#home">
-                Home
-              </a>
-            </li>
-            <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block text-white w-full" href="#about">
-                About
-              </a>
-            </li>
-            <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block text-white w-full" href="#classes">
-                Classes
-              </a>
-            </li>
-            <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block text-white w-full" href="#trainer">
-                Trainers
-              </a>
-            </li>
-            <li className=" w-full hover:bg-cyan-900">
-              <a
-                className=" px-5 py-2 block text-white w-full"
-                href="#contactus"
-              >
-                Contact Us
-              </a>
-            </li>
-            <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block text-white w-full" href="#gallery">
-                gallery
-              </a>
-            </li>
+            {navItems.map((item) => {
+              return (
+                <li className=" w-full hover:bg-cyan-900">
+                  <a
+                    className=" px-5 py-2 block text-white w-full"
+                    href={`#${item.toLowerCase().replace(" ", "")}`}
+                  >
+                    {item}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
           <div className="px-5 md:hidden flex flex-col items-start gap-4">
             <a className="text-white py-2 text-primary-900" href="#">
