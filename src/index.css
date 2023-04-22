@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
 html,
 body#root,
 .app {
@@ -12,4 +17,6 @@ body#root,
   font-family: "DM Sans", sans-serif;
   @apply text-blue-950;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  
 }

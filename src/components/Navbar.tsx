@@ -61,7 +61,7 @@ const Navbar = ({ isOpenmenu, setisOpenmenu }: props) => {
       {/* mobile menu */}
 
       {isOpenmenu && (
-        <div className="transition dauration-500 lg:hidden pt-[50px] fixed top-0 bottom-0 right-0 w-[200px] bg-cyan-600">
+        <div className="transition dauration-500 lg:hidden pt-[50px] fixed top-0 bottom-0 right-0 w-[200px] bg-blue-900">
           <ul className=" w-100 flex flex-col justify-center items-start gap-2 mb-3">
             <li className=" w-full hover:bg-cyan-900">
               <a className=" px-5 py-2 block text-white w-full" href="#home">

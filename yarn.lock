@@ -240,11 +240,6 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@esbuild/linux-x64@0.17.17":
-  version "0.17.17"
-  resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.17.17.tgz"
-  integrity sha512-XcSGTQcWFQS2jx3lZtQi7cQmDYLrpLRyz1Ns1DzZCtn898cWfm5Icx/DEWNcTU+T+tyPV89RQtDnI7qL2PObPg==
-
 "@heroicons/react@^2.0.17":
   version "2.0.17"
   resolved "https://registry.npmjs.org/@heroicons/react/-/react-2.0.17.tgz"
