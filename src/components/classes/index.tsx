@@ -7,6 +7,7 @@ import IMAGE6 from '../../assets/IMAGE6.jpg'
 import IMAGE7 from '../../assets/IMAGE7.jpg'
 import Htext from '../../shared/Htext'
 import Class from './Class'
+import Header from '../../shared/Header'
 const imageList = [
     {img:IMAGE2,title:'best trainers in the world',description:"three classes per week to make agood shape and good muscels"},
     {img:IMAGE3,title:'best trainers in the world',description:"three classes per week to make agood shape and good muscels"},
@@ -23,9 +24,7 @@ type Props = {}
 const Gallery = (props: Props) => {
     return (
         <div id='classes' className='my-10 bg-blue-100 py-10'>
-            <h2 className='text-center text-[32px] text-green-900 pb-10'>
-                Classes
-            </h2>
+            <Header>Classes</Header>
             <div className='w-full mx-auto container overflow-x-auto overflow-y-hidden '>
             <ul className='flex w-[2000px] gap-8'>
                 {imageList.map((item,index) => {
