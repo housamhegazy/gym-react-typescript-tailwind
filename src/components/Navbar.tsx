@@ -32,7 +32,7 @@ const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled }: props) => {
                 <a href="#classes">Classes</a>
               </li>
               <li>
-                <a href="#trainer">Trainers</a>
+                <a href="#trainers">Trainers</a>
               </li>
               <li>
                 <a href="#contactus">Contact Us</a>
