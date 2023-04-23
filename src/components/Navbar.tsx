@@ -84,7 +84,7 @@ const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled }: props) => {
               </a>
             </li>
             <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block hover:text-white w-full" href="#trainer">
+              <a className=" px-5 py-2 block hover:text-white w-full" href="#trainers">
                 Trainers
               </a>
             </li>
