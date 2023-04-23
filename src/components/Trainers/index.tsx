@@ -44,7 +44,7 @@ const Trainers = () => {
             <div className="basis-2/5 overflow-hidden rounded-tl-[50%] rounded-br-[50%] mb-5">
               <img
                 src={coatch.imgURL}
-                className="max-w-[50%] md:max-w-full mx-auto"
+                className="max-w-[50%] md:max-w-[70%] mx-auto"
               />
             </div>
           </div>

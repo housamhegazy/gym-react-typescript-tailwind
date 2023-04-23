@@ -5,7 +5,7 @@ type Props = {};
 const Footer = (props: Props) => {
   return (
     <footer className="rounded bg-blue-300">
-      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <div className="flex justify-center items-center flex-col w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-black sm:text-center">
           © 2023{" "}
           <a href="#" className="hover:underline">
