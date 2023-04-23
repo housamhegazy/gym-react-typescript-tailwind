@@ -1,14 +1,29 @@
 import Navbar from "./components/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Home from "./components/home";
-import Gallery from "./components/gallery";
+import Gallery from "./components/classes";
+import ContactUs from "./components/contactus";
 function App() {
   const [isOpenmenu, setisOpenmenu] = useState<boolean>(false);
+  const [isPageScrolled,setisPageScrolled] = useState<boolean>(false)
+  useEffect(()=>{
+   const handleScroll = ()=>{
+    if(window.scrollY === 0){
+      setisPageScrolled(false)
+    }
+    if(window.scrollY !== 0){
+      setisPageScrolled(true)
+    }
+   }
+   window.addEventListener("scroll",handleScroll);
+  //  return window.removeEventListener("scroll",handleScroll)
+  },[])
   return (
     <div className="App">
-      <Navbar {...{ isOpenmenu, setisOpenmenu }} />
+      <Navbar {...{ isOpenmenu, setisOpenmenu,isPageScrolled }} />
       <Home/>
       <Gallery/>
+      <ContactUs/>
     </div>
   );
 }

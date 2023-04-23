@@ -4,13 +4,13 @@ import ActionButton from "../../shared/ActionBtn"
 
 const Home = ()=>{
     return (
-        <div id="home" className="container mx-auto md:flex justify-between items-center w-full min-h-[90vh] pt-[80px]">
+        <div id="home" className="container mx-auto md:flex justify-between items-center w-full md:min-h-[90vh] pt-[80px]">
             <div className="px-3 basis-4/5">
                 <Htext>
-                    welcome to gym
+                    WELCOME TO X-GYM
                 </Htext>
                 <p className="my-2 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quia quod nobis soluta, temporibus id repellendus necessitatibus sequi? Quod totam sed qui consectetur rerum dolores iste non quas odio ut.</p>
-                <ActionButton>
+                <ActionButton target = {'#classes'}>
                     See More
                 </ActionButton>
             </div>
