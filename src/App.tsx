@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Home from "./components/home";
 import Gallery from "./components/classes";
 import ContactUs from "./components/contactus";
+import Footer from "./components/footer";
 function App() {
   const [isOpenmenu, setisOpenmenu] = useState<boolean>(false);
   const [isPageScrolled,setisPageScrolled] = useState<boolean>(false)
@@ -24,6 +25,7 @@ function App() {
       <Home/>
       <Gallery/>
       <ContactUs/>
+      <Footer/>
     </div>
   );
 }
