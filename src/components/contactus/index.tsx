@@ -19,7 +19,7 @@ const ContactUs = (props: Props) => {
     }
   };  
   return (
-    <div className="my-5 container mx-auto ">
+    <div id="contactus" className="my-5 container mx-auto ">
       <Header>Contact Us</Header>
       <div className="lg:flex gap-8 justify-between items-center w-full">
         <div className="basis-2/5 mb-5">
