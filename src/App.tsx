@@ -4,6 +4,7 @@ import Home from "./components/home";
 import Gallery from "./components/classes";
 import ContactUs from "./components/contactus";
 import Footer from "./components/footer";
+import Trainers from "./components/Trainers";
 function App() {
   const [isOpenmenu, setisOpenmenu] = useState<boolean>(false);
   const [isPageScrolled,setisPageScrolled] = useState<boolean>(false)
@@ -23,6 +24,7 @@ function App() {
     <div className="App">
       <Navbar {...{ isOpenmenu, setisOpenmenu,isPageScrolled }} />
       <Home/>
+      <Trainers/>
       <Gallery/>
       <ContactUs/>
       <Footer/>
