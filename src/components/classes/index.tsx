@@ -8,7 +8,8 @@ import IMAGE7 from '../../assets/IMAGE7.jpg'
 import Htext from '../../shared/Htext'
 import Class from './Class'
 import Header from '../../shared/Header'
-const imageList = [
+import { classTypes } from '../../shared/types'
+const imageList : Array<classTypes>=  [
     {img:IMAGE2,title:'best trainers in the world',description:"three classes per week to make agood shape and good muscels"},
     {img:IMAGE3,title:'best trainers in the world',description:"three classes per week to make agood shape and good muscels"},
     {img:IMAGE4,title:'best trainers in the world',description:"three classes per week to make agood shape and good muscels"},
@@ -27,7 +28,7 @@ const Gallery = (props: Props) => {
             <Header>Classes</Header>
             <div className='w-full mx-auto container overflow-x-auto overflow-y-hidden '>
             <ul className='flex w-[2000px] gap-8'>
-                {imageList.map((item,index) => {
+                {imageList.map((item:classTypes,index) => {
                     return (
                         <Class key={`${item.title}-${index}`}
                         image={item.img}

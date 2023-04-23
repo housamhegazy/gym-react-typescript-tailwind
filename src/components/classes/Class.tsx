@@ -1,6 +1,4 @@
 import React from 'react'
-import Htext from '../../shared/Htext';
-
 type Props = {
     title:string;
     desc:string;

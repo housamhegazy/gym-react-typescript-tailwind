@@ -11,8 +11,13 @@ type FormData = {
   textarea:string
 };
 const ContactUs = (props: Props) => {
-  const { register, setValue, handleSubmit, formState: { errors } } = useForm<FormData>();
-  const onSubmit = handleSubmit(data => console.log(data));  
+  const { register, trigger, formState: { errors } } = useForm<FormData>();
+  const onSubmit = async(e:any)=>{
+    const isValid = await trigger();
+    if(!isValid){
+      e.preventDefault()
+    }
+  };  
   return (
     <div className="my-5 container mx-auto ">
       <Header>Contact Us</Header>
@@ -52,7 +57,7 @@ const ContactUs = (props: Props) => {
 
             <textarea
             {...register("textarea", {
-              required: { value: true, message: " textarea is required" },
+              required: { value: true, message: " message is required" },
               minLength: {
                 value: 200,
                 message: "at least 200 letter",
