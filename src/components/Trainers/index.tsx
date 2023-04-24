@@ -28,7 +28,7 @@ const trainersData: Array<TrainersType> = [
 ];
 const Trainers = () => {
   return (
-    <div id="trainers" className="mx-auto bg-blue-200 px-5 py-5">
+    <div id="trainers" className="mx-auto bg-blue-200 px-5 pt-[50px]">
       <Header>Trainers</Header>
       {trainersData.map((coatch: TrainersType, index) => {
         return (
