@@ -3,6 +3,7 @@ import KARAMGABER from "../../assets/KARAMGABER.jpg";
 import BIGRAMI from "../../assets/BIGRAMI.jpg";
 import MOSTAFA from "../../assets/MOSTAFA.jpg";
 import Header from "../../shared/Header";
+import { motion } from "framer-motion"
 interface TrainersType {
   name: string;
   desc: string;
@@ -35,18 +36,37 @@ const Trainers = () => {
             key={index}
             className="md:flex justify-between items-center gap-8 border-b border-blue-900 mt-5"
           >
-            <div className="basis-3/5 pl-5">
+            <motion.div className="basis-3/5 pl-5" 
+            initial='hidden'
+            whileInView={'visible'}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 }
+            }}
+          
+            >
               <h1 className="text-xl text-blue-900 font-bold mb-4">
                 {coatch.name}
               </h1>
               <p>{coatch.desc}</p>
-            </div>
-            <div className="basis-2/5 overflow-hidden rounded-tl-[50%] rounded-br-[50%] mb-5">
+            </motion.div>
+            <motion.div className="basis-2/5 overflow-hidden rounded-tl-[50%] rounded-br-[50%] mb-5"
+              initial='hidden'
+              whileInView={'visible'}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                  hidden: { opacity: 0, x: 50 },
+                  visible: { opacity: 1, x: 0 }
+              }}
+            >
               <img
                 src={coatch.imgURL}
                 className="max-w-[50%] md:max-w-[70%] mx-auto"
               />
-            </div>
+            </motion.div>
           </div>
         );
       })}

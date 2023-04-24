@@ -2,7 +2,7 @@ import React from "react";
 import CONTACTUS from "../../assets/CONTACTUS.jpg";
 import Htext from "../../shared/Htext";
 import Header from "../../shared/Header";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 type Props = {};
 
 type FormData = {

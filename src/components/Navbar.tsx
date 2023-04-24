@@ -1,13 +1,15 @@
 import logo from "../assets/logo.png";
-import { BeakerIcon, Bars4Icon } from "@heroicons/react/24/solid";
-import { Circles } from "react-loader-spinner";
+import { Bars4Icon } from "@heroicons/react/24/solid";
+import { SElectedPage } from "../shared/types";
 type props = {
   isOpenmenu: boolean;
   setisOpenmenu: (value: boolean) => void;
   isPageScrolled: boolean;
-  navItems:string[]
+  navItems:string[],
+  selectedPage:SElectedPage;
+  setSelectedPage:(value:SElectedPage)=>void
 };
-const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled ,navItems}: props) => {
+const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled ,navItems,selectedPage,setSelectedPage}: props) => {
   return (
     <div>
       <div
@@ -24,9 +26,15 @@ const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled ,navItems}: props) =
           <div className="hidden lg:flex justify-between items-center gap-8 grow">
             <ul className="flex justify-between items-center gap-8 ">
             {navItems.map((item) => {
+              const lowerCase = item.toLowerCase().replace(" ", "") as SElectedPage
                 return (
                   <li>
-                    <a href={`#${item.toLowerCase().replace(" ", "")}`}>
+                    <a href={`#${lowerCase}`}
+                    onClick={()=>{
+                      setSelectedPage(lowerCase)
+                    }}
+                    className={`${selectedPage === lowerCase ? "text-green-900 border-b border-green-900":""}`}
+                    >
                       {item}
                     </a>
                   </li>
@@ -61,6 +69,7 @@ const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled ,navItems}: props) =
         <div className="transition dauration-500 lg:hidden pt-[50px] fixed top-0 z-50 bottom-0 right-0 w-[200px] bg-blue-400">
           <ul className=" w-100 flex flex-col justify-center items-start gap-2 mb-3">
           {navItems.map((item) => {
+            const lowerCase = item.toLowerCase().replace(" ", "") as SElectedPage
               return (
                 <li
                 onClick={() => {
@@ -70,6 +79,9 @@ const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled ,navItems}: props) =
                   <a
                     className=" px-5 py-2 block text-white w-full"
                     href={`#${item.toLowerCase().replace(" ", "")}`}
+                    onClick={()=>{
+                      setSelectedPage(lowerCase)
+                    }}
                   >
                     {item}
                   </a>

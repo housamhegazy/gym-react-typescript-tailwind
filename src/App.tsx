@@ -6,6 +6,8 @@ import ContactUs from "./components/contactus";
 import Footer from "./components/footer";
 import Trainers from "./components/Trainers";
 import { Circles } from "react-loader-spinner";
+import { SElectedPage } from "./shared/types";
+
 const navItems: string[] = [
   "Home",
   "About",
@@ -18,6 +20,7 @@ function App() {
   const [isOpenmenu, setisOpenmenu] = useState<boolean>(false);
   const [isPageScrolled, setisPageScrolled] = useState<boolean>(false);
   const [spinner, setSpinner] = useState<boolean>(false);
+  const [selectedPage,setSelectedPage] = useState<SElectedPage>(SElectedPage.Home)
   useEffect(() => {
     setSpinner(true);
     setTimeout(() => {
@@ -52,8 +55,8 @@ function App() {
         </div>
       )}
 
-      <Navbar {...{ isOpenmenu, setisOpenmenu, isPageScrolled ,navItems}} />
-      <Home />
+      <Navbar {...{ isOpenmenu, setisOpenmenu, isPageScrolled ,navItems,selectedPage,setSelectedPage}} />
+      <Home {...{selectedPage,setSelectedPage}}/>
       <Trainers />
       <Classes />
       <ContactUs />
