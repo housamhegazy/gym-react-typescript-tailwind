@@ -10,7 +10,7 @@ const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled }: props) => {
   return (
     <div>
       <div
-        className={`fixed top:0 z-40 w-full px-[40px] flex justify-between items-center ${
+        className={`fixed top:0 z-40 w-full md:px-[40px] flex justify-between items-center ${
           isPageScrolled ? "bg-blue-400" : ""
         } `}
       >
@@ -69,22 +69,34 @@ const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled }: props) => {
         <div className="transition dauration-500 lg:hidden pt-[50px] fixed top-0 z-50 bottom-0 right-0 w-[200px] bg-blue-400">
           <ul className=" w-100 flex flex-col justify-center items-start gap-2 mb-3">
             <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block hover:text-white w-full" href="#home">
+              <a
+                className=" px-5 py-2 block hover:text-white w-full"
+                href="#home"
+              >
                 Home
               </a>
             </li>
             <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block hover:text-white w-full" href="#about">
+              <a
+                className=" px-5 py-2 block hover:text-white w-full"
+                href="#about"
+              >
                 About
               </a>
             </li>
             <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block hover:text-white w-full" href="#classes">
+              <a
+                className=" px-5 py-2 block hover:text-white w-full"
+                href="#classes"
+              >
                 Classes
               </a>
             </li>
             <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block hover:text-white w-full" href="#trainer">
+              <a
+                className=" px-5 py-2 block hover:text-white w-full"
+                href="#trainer"
+              >
                 Trainers
               </a>
             </li>
@@ -97,7 +109,10 @@ const Navbar = ({ isOpenmenu, setisOpenmenu, isPageScrolled }: props) => {
               </a>
             </li>
             <li className=" w-full hover:bg-cyan-900">
-              <a className=" px-5 py-2 block hover:text-white w-full" href="#gallery">
+              <a
+                className=" px-5 py-2 block hover:text-white w-full"
+                href="#gallery"
+              >
                 gallery
               </a>
             </li>
